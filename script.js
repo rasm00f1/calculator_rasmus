@@ -42,7 +42,6 @@ function runOptionalRounding() {
 
 function displayResult() {
   console.log(result);
-  document.querySelector("#results").appendChild(result);
 }
 
 function clearResults() {
