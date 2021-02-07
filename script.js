@@ -6,8 +6,11 @@ let secondDigit;
 let operator;
 let result;
 
+const resultList = document.querySelector("#results");
+
 function initialize() {
   document.querySelector("#calculate").addEventListener("click", readNumbers);
+  document.querySelector("#clear").addEventListener("click", clearResults);
 }
 
 function readNumbers() {
@@ -42,8 +45,12 @@ function runOptionalRounding() {
 
 function displayResult() {
   console.log(result);
+
+  resultList.innerHTML += `<li>${result}</li>`;
 }
 
 function clearResults() {
   console.log("clear results");
+
+  resultList.innerHTML = "";
 }
